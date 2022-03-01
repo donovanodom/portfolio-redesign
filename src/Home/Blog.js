@@ -22,6 +22,7 @@ const Blog = () => {
         const blogs = info.data.items;
         const posts = blogs.filter((post) => post.categories.length > 0);
         setBlog({ item: posts, isLoading: false });
+        console.log(blogs);
       })
       .catch((err) => setBlog({ error: err.message }));
   }, [axios]);
@@ -36,8 +37,8 @@ const Blog = () => {
   return (
     <div className="blog">
       <BlogFilterContainer
-        langs={langs}
         activeLang={activeLang}
+        langs={langs}
         setActiveLang={setActiveLang}
       />
       <BlogContainer posts={activeLang === "All" ? blog.item : filteredBlogs} />

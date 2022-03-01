@@ -1,9 +1,14 @@
+import DropdownButton from "react-bootstrap/DropdownButton";
 import React from "react";
 import BlogFilterCard from "./BlogFilterCard";
 
-const BlogFilterContainer = ({ langs, activeLang, setActiveLang }) => {
+const BlogFilterContainer = ({ activeLang, langs, setActiveLang }) => {
   return (
-    <div className="blog-filter-container">
+    <DropdownButton
+      className="blog-filter-container"
+      id="dropdown-basic-button"
+      title={activeLang}
+    >
       {langs?.map((lang, index) => (
         <BlogFilterCard
           key={index}
@@ -12,7 +17,7 @@ const BlogFilterContainer = ({ langs, activeLang, setActiveLang }) => {
           onClick={() => setActiveLang(lang)}
         />
       ))}
-    </div>
+    </DropdownButton>
   );
 };
 
