@@ -1,5 +1,7 @@
 import React from "react";
 import BlogCard from "./BlogCard";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 const BlogContainer = ({ posts }) => {
   const stripHtml = (html) => {
@@ -9,16 +11,18 @@ const BlogContainer = ({ posts }) => {
   };
 
   return (
-    <div className="blog-container">
-      {posts?.map((post, index) => (
-        <BlogCard
-          key={index}
-          link={post.link}
-          title={post.title}
-          description={stripHtml(post.description)}
-        />
-      ))}
-    </div>
+    <Container className="blog-container">
+      <Row>
+        {posts?.map((post, index) => (
+          <BlogCard
+            key={index}
+            link={post.link}
+            title={post.title}
+            description={stripHtml(post.description)}
+          />
+        ))}
+      </Row>
+    </Container>
   );
 };
 
