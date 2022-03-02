@@ -6,9 +6,12 @@ const Header = () => {
   return (
     <Container className="header" fluid>
       <Row>
-        <Col>1 of 1</Col>
-        <Col className="header-image">
-          <img alt="Donovan Odom" src="https://i.imgur.com/cvDRlyh.png" />
+        <Col className="header-info">
+          <h1>Donovan Odom</h1>
+          <h2>Full Stack Web Developer</h2>
+        </Col>
+        <Col sm={12} md={6} className="header-image">
+          <img alt="Donovan Odom" src="https://i.imgur.com/18uiSHy.png" />
         </Col>
       </Row>
     </Container>
