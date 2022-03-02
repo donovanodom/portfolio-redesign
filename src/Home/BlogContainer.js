@@ -18,7 +18,6 @@ const BlogContainer = ({ posts }) => {
             key={index}
             link={post.link}
             title={post.title}
-            image={post.thumbnail}
             description={stripHtml(post.description)}
           />
         ))}

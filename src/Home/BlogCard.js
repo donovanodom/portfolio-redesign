@@ -3,12 +3,14 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 
-const BlogCard = ({ image, link, title, description }) => {
+const BlogCard = ({ link, title, description }) => {
   const bodyStyle = {
     display: "-webkit-box",
-    WebkitLineClamp: "3",
+    WebkitLineClamp: "4",
     WebkitBoxOrient: "vertical",
-    overflow: "hidden"
+    overflow: "hidden",
+    margin: "0",
+    lineHeight: "22px"
   };
   const titleStyle = {
     display: "-webkit-box",
@@ -16,20 +18,18 @@ const BlogCard = ({ image, link, title, description }) => {
     WebkitBoxOrient: "vertical",
     overflow: "hidden"
   };
-  const imageStyle = {
-    position: "absolute",
-    height: "200px",
-    width: "200px",
-    objectFit: "cover"
-  };
   return (
     <Col>
       <Card className="blog-card">
-        <Card.Img variant="top" src={image} style={imageStyle} />
-        <Card.Body style={{ marginLeft: "200px", textAlign: "left" }}>
+        <Card.Body style={{ marginRight: "31px", textAlign: "left" }}>
           <Card.Title style={titleStyle}>{title}</Card.Title>
           <Card.Text style={bodyStyle}>{description}</Card.Text>
-          <Button href={link} variant="primary">
+          <Button
+            className="blog-button"
+            href={link}
+            variant="primary"
+            size="sm"
+          >
             Read more
           </Button>
         </Card.Body>
