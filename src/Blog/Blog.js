@@ -22,7 +22,6 @@ const Blog = ({ active }) => {
         const blogs = info.data.items;
         const posts = blogs.filter((post) => post.categories.length > 0);
         setBlog({ item: posts, isLoading: false });
-        console.log(blogs);
       })
       .catch((err) => setBlog({ error: err.message }));
   }, [axios]);

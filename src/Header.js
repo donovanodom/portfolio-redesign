@@ -7,7 +7,11 @@ const Header = () => {
       <Row>
         <Col className="header-info">
           <div className="header-links">
-            <div>About</div>
+            <div>
+              <Link className="header-link" to="/about">
+                About
+              </Link>
+            </div>
             <div>Projects</div>
           </div>
           <h1>
