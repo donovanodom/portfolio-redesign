@@ -5,7 +5,7 @@ import BlogFilterCard from "./BlogFilterCard";
 const BlogFilterContainer = ({ activeLang, langs, setActiveLang }) => {
   return (
     <div className="blog-filter-container">
-      <h4 style={{ float: "left" }}>Filter by category</h4>
+      <h4 style={{ float: "left" }}>Category</h4>
       <DropdownButton id="dropdown-basic-button" title={activeLang}>
         {langs?.map((lang, index) => (
           <BlogFilterCard

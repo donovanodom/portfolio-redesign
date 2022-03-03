@@ -10,12 +10,18 @@ const Header = () => {
             <div>About</div>
             <div>Projects</div>
           </div>
-          <h1>DONOVAN ODOM</h1>
-          <img
-            className="logo"
-            alt="logo"
-            src="https://i.imgur.com/t9KskKr.png"
-          />
+          <h1>
+            <Link className="header-logo-link" to="/">
+              DONOVAN ODOM
+            </Link>
+          </h1>
+          <Link className="header-logo-link" to="/">
+            <img
+              className="logo"
+              alt="logo"
+              src="https://i.imgur.com/t9KskKr.png"
+            />
+          </Link>
           <div className="header-links">
             <div>
               <Link className="header-link" to="/blog">

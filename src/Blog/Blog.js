@@ -35,7 +35,7 @@ const Blog = ({ active }) => {
   );
 
   return (
-    <div className={active ? "blog" : "blog-hide"}>
+    <div className="blog">
       <BlogFilterContainer
         activeLang={activeLang}
         langs={langs}
