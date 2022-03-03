@@ -1,11 +1,15 @@
-import Blog from "./Blog";
 import Header from "./Header";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Header />
-      <Blog />
+      <div className="intro">
+        Donovan Odom is a Ruby on Rails-loving, Design-adept, Full Stack
+        Software developer settled in Seattle, WA
+        <div style={{ display: "inline" }}> &#127783;</div>
+      </div>
+      <div className="self"></div>
     </div>
   );
 };

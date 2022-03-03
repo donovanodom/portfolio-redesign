@@ -3,7 +3,7 @@ import BlogFilterContainer from "./BlogFilterContainer";
 import BlogContainer from "./BlogContainer";
 import { useState, useEffect } from "react";
 
-const Blog = () => {
+const Blog = ({ active }) => {
   const mediumURL =
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@donovanodom";
 
@@ -35,7 +35,7 @@ const Blog = () => {
   );
 
   return (
-    <div className="blog">
+    <div className={active ? "blog" : "blog-hide"}>
       <BlogFilterContainer
         activeLang={activeLang}
         langs={langs}
