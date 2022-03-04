@@ -1,42 +1,55 @@
-import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { BsList, BsX } from "react-icons/bs";
+import { useState } from "react";
 
 const Header = () => {
+  const [active, setActive] = useState(false);
+
+  const toggle = () => {
+    setActive((active) => !active);
+  };
   return (
-    <Container className="header" fluid>
-      <Row>
-        <Col className="header-info">
-          <div className="header-links">
+    <div className={active ? "header" : "header-hide"} fluid>
+      {active ? (
+        <BsX id="menu-toggle" onClick={toggle} />
+      ) : (
+        <BsList id="menu-toggle" onClick={toggle} />
+      )}
+      <div>
+        <div className="header-info">
+          <div className={active ? "header-links" : "header-links-hide"}>
             <div>
-              <Link className="header-link" to="/about">
-                About
+              <Link onClick={toggle} className="header-link" to="/">
+                Home
               </Link>
             </div>
-            <div>Projects</div>
-          </div>
-          <h1>
-            <Link className="header-logo-link" to="/">
-              DONOVAN ODOM
+            <div onClick={toggle} className="header-link">
+              Projects
+            </div>
+            <Link id="do" className="header-logo-link" to="/">
+              <h1> DONOVAN ODOM </h1>
             </Link>
-          </h1>
-          <Link className="header-logo-link" to="/">
-            <img
-              className="logo"
-              alt="logo"
-              src="https://i.imgur.com/t9KskKr.png"
-            />
-          </Link>
-          <div className="header-links">
+            <Link onClick={toggle} className="header-logo-link" to="/">
+              <img
+                className="logo"
+                alt="logo"
+                src="https://i.imgur.com/t9KskKr.png"
+              />
+            </Link>
             <div>
-              <Link className="header-link" to="/blog">
+              <Link onClick={toggle} className="header-link" to="/blog">
                 Blog
               </Link>
             </div>
-            <div>Contact</div>
+            <div>
+              <Link onClick={toggle} className="header-link" to="/about">
+                About
+              </Link>
+            </div>
           </div>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 
