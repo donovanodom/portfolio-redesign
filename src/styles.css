@@ -148,7 +148,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transform: translateZ(50px);
 }
 .self2 {
   margin: 0 auto 20px auto;
@@ -160,7 +159,6 @@
   background-size: cover;
   background-position: 0% 25%;
   background-repeat: no-repeat;
-  transform: translateZ(50px);
 }
 .logo {
   height: 40px;
@@ -263,7 +261,7 @@
     display: none;
   }
   .cur-pad {
-    padding-top: 0;
+    padding-top: 20px;
   }
   .footer {
     display: none;
@@ -302,7 +300,7 @@
     border-radius: 50px;
   }
   .about {
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 90%;
   }
   .self2 {
