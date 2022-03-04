@@ -11,7 +11,8 @@ const BlogCard = ({ link, title, image, date, author }) => {
     overflow: "hidden",
     fontSize: "18px",
     fontWeight: "800",
-    textAlign: "left"
+    textAlign: "left",
+    width: "100%"
   };
   return (
     <Col sm={12} xxl={6}>
